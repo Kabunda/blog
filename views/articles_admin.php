@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-        <div class="container">
-            <h1>Мой первый блог</h1>
+        <div class="container">          
+            <a href="../index.php"><h1>Мой первый блог</h1></a>
             <a href="index.php?action=add">Добавить статью</a>
             <div>
                 <table class="admin-table">
