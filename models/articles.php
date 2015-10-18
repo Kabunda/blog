@@ -30,7 +30,7 @@
 
      return $article;
  }
- function articles_new($link, $title, $date, $content){
+ function articles_new($link, $title, $date, $content, $filename){
      //Подготовка
      $title=trim($title);
      $content=trim($content);
@@ -40,11 +40,12 @@
          return false;
      
      //Запрос
-     $t = "INSERT INTO articles (title, date, content) VALUES ('%s', '%s', '%s')";
+     $t = "INSERT INTO articles (title, date, content, filename) VALUES ('%s', '%s', '%s', '%s')";
      $query = sprintf($t,
-                      mysqli_real_escape_string($link, $title),
-                      mysqli_real_escape_string($link, $date),
-                      mysqli_real_escape_string($link, $content));
+                    mysqli_real_escape_string($link, $title),
+                    mysqli_real_escape_string($link, $date),
+                    mysqli_real_escape_string($link, $content),
+                    mysqli_real_escape_string($link, $filename));
      $result = mysqli_query($link, $query);
      if (!$result)
          die(mysqli_error($link));
