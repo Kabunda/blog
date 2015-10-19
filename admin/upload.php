@@ -1,8 +1,3 @@
-<html>
-<head>
-  <title>Результат загрузки файла</title>
-</head>
-<body>
 <?php
    if($_FILES["filename"]["size"] > 1024*3*1024)
    {
@@ -19,5 +14,3 @@
       echo("Ошибка загрузки файла");
    }
 ?>
-</body>
-</html>

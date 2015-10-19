@@ -5,6 +5,7 @@
     $link = db_connect();
 
 if(isset($_GET['action']))
+//bool isset (mixed var [, mixed var [, ...]]) Возвращает TRUE, если var существует; иначе FALSE.
     $action=$_GET['action'];
 else
     $action="";
@@ -12,6 +13,11 @@ else
 if($action == "add"){
     
     if(!empty($_POST)){
+//bool empty ( mixed $var )
+//Проверяет, считается ли переменная пустой.
+//Переменная считается пустой, если она не существует или её значение равно FALSE.
+//empty() не генерирует предупреждение если переменная не существует.
+//Возвращает FALSE, если var существует, и содержит непустое и ненулевое значение.
         articles_new($link, $_POST['title'], $_POST['date'], $_POST['content'], $_FILES["filename"]['name']);
         header("Location: index.php");
     }
