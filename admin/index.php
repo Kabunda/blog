@@ -5,10 +5,41 @@
     $link = db_connect();
 
 if(isset($_GET['action']))
-//bool isset (mixed var [, mixed var [, ...]]) Возвращает TRUE, если var существует; иначе FALSE.
-    $action=$_GET['action'];
+//bool isset (mixed var [, mixed var [, ...]]) Возвращает TRUE, если var существует;
+//иначе FALSE.
+    $action="";//$_GET['action'];
 else
     $action="";
+
+if($_FILES["filename"]["size"] > 1024*3*1024)
+   {
+     echo ("Размер файла превышает три мегабайта");
+     exit;
+   }
+   // Проверяем загружен ли файл
+   if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
+   {
+     // Если файл загружен успешно, перемещаем его
+     // из временной директории в конечную
+     move_uploaded_file($_FILES["filename"]["tmp_name"], "e:".$_FILES["filename"]["name"]);
+   } else {
+      echo("Ошибка загрузки файла");
+   }
+
+echo "Служебная информация";
+echo " _GET: ";
+foreach ($_GET as $key => $value) {
+    echo " $key => $value \n";
+}
+echo " _POST: ";
+foreach ($_POST as $key => $value) {
+    echo " $key => $value \n";
+}
+echo " _FILES: ";
+foreach ($_FILES["filename"] as $key => $value) {
+    echo " $key => $value \n";
+}
+
 
 if($action == "add"){
     

@@ -26,14 +26,12 @@
                         <textarea name="content" class="form-item" required><?=$article['content']?></textarea>
                     </label>
                     <br>
-                    <input type="submit" value="Сохранить" class="btn">
-                </form><br>
-                    <form method="post" action="upload.php" enctype="multipart/form-data">
-                        <label>
-                            Фотография<br>
+                    <label>
+                        Фотография<br>
                         <input type="file" name="filename">
-                        </label>
-                        <input type="submit" value="Загрузить"><br>
+                    </label>
+                    <br>
+                        <input type="submit" value="Сохранить" class="btn">
                     </form>
             </div>    
                 <footer>
