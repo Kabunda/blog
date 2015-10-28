@@ -1,3 +1,6 @@
+/*щрифт с Google Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Prosto+One&subset=latin,cyrillic);
+
 footer{
     text-align: center;
 }
@@ -11,4 +14,26 @@ footer{
 }
 .form-item{
     width: 500px;
+}
+
+#navigation {
+    height: 50px;    
+}
+#navigation ul li{
+    list-style-type: none;
+    float:left;
+}
+#navigation ul li a{
+    color: brown;
+    padding: 0 20px;
+    font-family: 'Prosto One', cursive;
+    text-decoration: none;
+    line-height: 50px;
+    display: block;
+    height: 50px;
+    
+}
+#navigation ul li a:hover{
+    background: #b2def0;
+    text-decoration: underline;
 }

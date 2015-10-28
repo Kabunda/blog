@@ -8,8 +8,16 @@
 </head>
 <body>
         <div class="container">
+            <div id="navigation">
+                <ul>
+                    <li><a href="admin">Панель администратора</a></li>
+                    <li><a href='#'>пункт 2</a></li>
+                    <li><a href='#'>пункт 3</a></li>
+                    <li><a href='#'>пункт 4</a></li>
+                    <li><a href='#'>пункт 5</a></li>
+                </ul>
+            </div>
             <h1>Мой первый блог</h1>
-            <a href="admin">Панель администратора</a>
             <div>
                 <?php foreach($articles as $a): ?>
                 <div class="article">
