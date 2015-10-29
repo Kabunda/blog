@@ -88,6 +88,6 @@
      return mysqli_affected_rows($link); 
 }
 function articles_intro($text, $len = 500){
-    return mb_substr($text, 0, $len);
+    return strip_tags(mb_substr($text, 0, $len));
 }
 ?>
