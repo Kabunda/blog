@@ -11,7 +11,7 @@
             <div id="navigation">
                 <ul>
                     <li><a href="admin">Панель администратора</a></li>
-                    <li><a href='#'>пункт 2</a></li>
+                    <li><a href='ishtar'>макет Иштар</a></li>
                     <li><a href='#'>пункт 3</a></li>
                     <li><a href='#'>пункт 4</a></li>
                     <li><a href='#'>пункт 5</a></li>
